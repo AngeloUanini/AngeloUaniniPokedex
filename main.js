@@ -1,57 +1,99 @@
-const pokemon = [
-    {nombre:"bulbasur", ID:"1"},
-    {nombre:"charmander", ID:"2"},
-    {nombre:"squirtle", ID:"3"},
-    {nombre:"pikachu", ID:"4"}
-]
+const pokemons = [
+  {
+    id: "0001",
+    nombre: "Bulbasur",
+    tipo: ["Planta", "Veneno"],
+    imagen: "./images/Bulbasur.png",
+  },
 
-function pokedex() {
-    let bandera = true
+  {
+    id: "0002",
+    nombre: "Ivysaur",
+    tipo: ["Planta", "Veneno"],
+    imagen: "./images/Ivysaur.png",
+  },
 
-    while (bandera){
-        let opcion = Number(
-        prompt(
-            "Como quiere buscar?\n 1- Nombre del pokemon\n 2- ID del pokemon\n 3- Salir"
-        )
-    )
-     if(opcion === 1){
-        buscarPokemon('nombre')
-    }else if(opcion === 2){
-        buscarPokemon('ID')
-    }else if(opcion === 3){
-        bandera = false
-        alert('Hasta Luego!')
-    }else{
-        alert("Esa opcion no existe")
-    }
-    }
+  {
+    id: "0003",
+    nombre: "Venusaur",
+    tipo: ["Planta", "Veneno"],
+    imagen: "./images/Venusaur.png",
+  },
+
+  {
+    id: "0004",
+    nombre: "Charmander",
+    tipo: ["Fuego"],
+    imagen: "./images/Charmander.png",
+  },
+
+  {
+    id: "0005",
+    nombre: "Charmeleon",
+    tipo: ["Fuego"],
+    imagen: "./images/Charmeleon.png",
+  },
+
+  {
+    id: "0006",
+    nombre: "Charizard",
+    tipo: ["Fuego", "Volador"],
+    imagen: "./images/Charizard.png",
+  },
+
+  {
+    id: "0007",
+    nombre: "Squirtle",
+    tipo: ["Agua"],
+    imagen: "./images/Squirtle.png",
+  },
+
+  {
+    id: "0008",
+    nombre: "Wartortle",
+    tipo: ["Agua"],
+    imagen: "./images/Wartortle.png",
+  },
+
+  {
+    id: "0009",
+    nombre: "Blastoise",
+    tipo: ["Agua"],
+    imagen: "./images/Blastoise.png",
+  },
+];
+
+const botonAgregar = document.querySelectorAll(".boton");
+const listaEquipo = document.querySelector(".listaEquipo");
+const botonVaciar = document.querySelector(".vaciarEquipo");
+
+const equipo = [];
+
+botonAgregar.forEach((boton, index) => {
+  boton.addEventListener("click", () => {
+    agregarAlEquipo(pokemons[index]);
+  });
+});
+
+function agregarAlEquipo(pokemon) {
+  if (equipo.find((p) => p.id === pokemon.id)) {
+    alert(`${pokemon.nombre} ya esta en el equipo`);
+    return;
+  }
+  equipo.push(pokemon);
+  renderizarEquipo();
 }
 
-function buscarPokemon(criterio) {
-    const arrayBusqueda = []
-    
-    for(let i = 0; i < pokemon.length; i++){
-        arrayBusqueda.push(pokemon[i][criterio])
-    }
-
-    let textoPregunta
-    if(criterio === 'nombre'){
-        textoPregunta = 'Cual es el nombre del pokemon que usted busca?'
-    }else {
-        textoPregunta = 'Cual es el ID del pokemon que usted busca?'
-    }
-
-    let pokemonABuscar = prompt(textoPregunta)
-
-    let index =arrayBusqueda.indexOf(pokemonABuscar)
-
-    if(index === -1){
-        alert('Este pokemon no se encuentra en la pokedex')
-    } else if(criterio ==='nombre'){
-        alert('El pokemon se encuentra en la pokedex, su ID es: '+ pokemon[index].ID)
-    }else{
-        alert('El pokemon se encuentra en la pokedex, su nombre es: '+ pokemon[index].nombre)
-    }
+function renderizarEquipo() {
+  listaEquipo.innerHTML = "";
+  equipo.forEach((pokemon) => {
+    const li = document.createElement("li");
+    li.textContent = `${pokemon.nombre} (N°${pokemon.id})`;
+    listaEquipo.appendChild(li);
+  });
 }
-pokedex()
 
+botonVaciar.addEventListener("click", () => {
+  equipo.length = 0;
+  renderizarEquipo();
+});

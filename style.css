@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: "Fredoka", sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.5;
+}
+
+main {
+  display: flex;
+  gap: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.titulo {
+  text-align: center;
+}
+
+.pokedex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  background-image: url(./images/Fondos-de-pantalla-pokemon.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.tarjetaPokemon {
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 5;
+  padding: 3rem;
+}
+
+.imagenPokemon {
+  background-color: rgb(236, 236, 236);
+}
+
+.id {
+  color: #919191;
+  font-size: 90%;
+  padding-top: 2px;
+}
+
+.nombrePokemon {
+  font-size: 145%;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.centrarTipos {
+  text-align: center;
+}
+
+.tipoPlanta {
+  border-radius: 3px;
+  background-color: #9bcc50;
+  color: #212121;
+  text-align: center;
+  margin: 10px;
+  padding: 3px;
+}
+
+.tipoVeneno {
+  border-radius: 3px;
+  background-color: #ff69ff;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+  padding: 3px;
+}
+
+.tipoFuego {
+  border-radius: 3px;
+  background-color: #ff4848;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+  padding: 3px;
+}
+
+.tipoVolador {
+  border-radius: 3px;
+  text-align: center;
+  margin: 10px;
+  padding: 3px;
+  background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+  background-color: #3dc7ef;
+  color: #212121;
+}
+
+.tipoAgua {
+  border-radius: 3px;
+  background-color: #6078ff;
+  color: #ffffff;
+  text-align: center;
+  margin: 10px;
+  padding: 3px;
+}
+
+.boton {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.centrarBoton {
+  text-align: center;
+}
+
+.equipo {
+  background-color: #f8f8f8; /* color suave */
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 15px;
+  width: 250px; /* ancho fijo */
+}
+
+.equipo h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.listaEquipo {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 15px 0;
+}
+
+.listaEquipo li {
+  padding: 5px;
+  margin-bottom: 8px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.vaciarEquipo {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.vaciarEquipo:hover {
+  background-color: #c0392b;
+}
