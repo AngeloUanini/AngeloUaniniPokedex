@@ -21,182 +21,29 @@
   <body>
     <header>
       <h1 class="titulo">Pokedex</h1>
+
+      <div class="buscador">
+        <input
+          type="text"
+          id="busqueda"
+          placeholder="Buscar Pokémon por nombre o ID"
+        />
+        <button id="btnBuscar">Buscar</button>
+      </div>
     </header>
 
     <main>
-      <section class="pokedex">
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Bulbasur.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0001</span>
-            <h5 class="nombrePokemon">Bulbasur</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoPlanta">Planta</span>
-            <span class="tipoVeneno">Veneno</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
+      
+  <div class="pokedex-container">
+    <section class="pokedex"></section>
+    <div id="paginacion" class="paginacion"></div>
+  </div>
 
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Ivysaur.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0002</span>
-            <h5 class="nombrePokemon">Ivysaur</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoPlanta">Planta</span>
-            <span class="tipoVeneno">Veneno</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Venusaur.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0003</span>
-            <h5 class="nombrePokemon">Venusaur</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoPlanta">Planta</span>
-            <span class="tipoVeneno">Veneno</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Charmander.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0004</span>
-            <h5 class="nombrePokemon">Charmander</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoFuego">Fuego</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Charmeleon.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0005</span>
-            <h5 class="nombrePokemon">Charmeleon</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoFuego">Fuego</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Charizard.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0006</span>
-            <h5 class="nombrePokemon">Charizard</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoFuego">Fuego</span>
-            <span class="tipoVolador">Volador</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Squirtle.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0007</span>
-            <h5 class="nombrePokemon">Squirtle</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoAgua">Agua</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Wartortle.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0008</span>
-            <h5 class="nombrePokemon">Wartortle</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoAgua">Agua</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-
-        <article class="tarjetaPokemon">
-          <img
-            class="imagenPokemon"
-            src="./images/Blastoise.png"
-            alt="Imagen del Pokemon"
-          />
-          <div>
-            <span class="id">N°0009</span>
-            <h5 class="nombrePokemon">Blastoise</h5>
-          </div>
-          <div class="centrarTipos">
-            <span class="tipoAgua">Agua</span>
-          </div>
-          <div class="centrarBoton">
-            <button class="boton">Agregar al Equipo</button>
-          </div>
-        </article>
-      </section>
-
-      <aside class="equipo">
-        <h2>Equipo Pokemon</h2>
-        <ul class="listaEquipo"></ul>
-        <button class="vaciarEquipo">Vaciar Equipo</button>
-      </aside>
+  <aside class="equipo">
+    <h2>Equipo Pokemon</h2>
+    <ul class="listaEquipo"></ul>
+    <button class="vaciarEquipo">Vaciar Equipo</button>
+  </aside>
     </main>
 
     <footer>
@@ -218,6 +65,7 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./main.js"></script>
   </body>
 </html>
